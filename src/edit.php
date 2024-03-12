@@ -15,28 +15,28 @@ if(isset($_POST['modifica'])) {
 	$GC = mysqli_real_escape_string($mysqli, $_POST['GC']);
 	$DG = mysqli_real_escape_string($mysqli, $_POST['DG']);
 
-	if(empty($posicion) || empty($name) || empty($PJ) || empty($GF) || empty($GC) || empty($DG))	{
+	if(empty($posicion) || empty($name) || empty($PJ) || empty($GF) || empty($GC) || empty($DG)){
 		if(empty($posicion)) {
-			echo "<font color='red'>Campo nombre vacío.</font><br/>";
+			echo "<font color='red'>Campo posicion vacío.</font><br/>";
 		}
 
 		if(empty($name)) {
-			echo "<font color='red'>Campo apellido vacío.</font><br/>";
+			echo "<font color='red'>Campo Equipo vacío.</font><br/>";
 		}
 
 		if(empty($PJ)) {
-			echo "<font color='red'>Campo edad vacío.</font><br/>";
+			echo "<font color='red'>Campo PartidosJugados vacío.</font><br/>";
 		}
 
 		if(empty($GF)) {
-			echo "<font color='red'>Campo edad vacío.</font><br/>";
+			echo "<font color='red'>Campo GolesFavor vacío.</font><br/>";
 		}
-
+		
 		if(empty($GC)) {
-			echo "<font color='red'>Campo edad vacío.</font><br/>";
+			echo "<font color='red'>Campo GolesContra vacío.</font><br/>";
 		}
 		if(empty($DG)) {
-			echo "<font color='red'>Campo edad vacío.</font><br/>";
+			echo "<font color='red'>Campo GolesDirecto vacío.</font><br/>";
 		}
 	} //fin si
 	else 
@@ -136,13 +136,11 @@ Al hacer click en el botón Guardar, llama a esta misma página: edit.php-->
 			<label for="GF">GolesFavor</label>
 			<input type="number" name="GF" id="GF" value="<?php echo $GF;?>" required>
 		</div>
-
 		
 		<div>
 			<label for="GC">GolesContra</label>
 			<input type="number" name="GC" id="GC" value="<?php echo $GC;?>" required>
 		</div>
-
 		
 		<div>
 			<label for="DG">GolesDirectos</label>
