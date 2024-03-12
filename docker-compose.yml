@@ -2,7 +2,7 @@ version: '3'
 
 services: 
   apache:
-    image: lumigv/lamp-crud-app:1.0
+    image: juliansr1233/actividad0.1-lamp-crud-julian:1.0
     ports: 
       - 80:80
     environment: 
